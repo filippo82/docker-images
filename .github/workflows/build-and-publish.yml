@@ -31,10 +31,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Build image and push to Docker Hub and GitHub Container Registry
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           # relative path to the place where source code with Dockerfile is located
-          context: ./src/samples/Dockerfile.helloworld
+          context: ./src/samples
           # Note: tags has to be all lower-case
           tags: |
             filippo82/github-actions-test:latest 

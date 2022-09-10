@@ -35,7 +35,6 @@ jobs:
         with:
           # relative path to the place where source code with Dockerfile is located
           context: ./src/samples
-          file: ${{context}}/Dockerfile.helloworld
           # Note: tags has to be all lower-case
           tags: |
             filippo82/github-actions-test:latest 

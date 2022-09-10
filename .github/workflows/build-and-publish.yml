@@ -39,7 +39,7 @@ jobs:
           file: ./src/samples/Dockerfile
           # Note: tags has to be all lower-case
           tags: |
-            filippo82/github-actions-test:latest 
+            ${{ secrets.DOCKERHUB_USERNAME }}/github-actions-test:latest 
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 

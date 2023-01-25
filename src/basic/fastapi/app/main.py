@@ -11,3 +11,8 @@ app = FastAPI()
 async def read_root():
     message = f"Hello world! From FastAPI running on Uvicorn with Gunicorn. Using Python {version}"
     return {"message": message}
+
+@app.get("/hello/{name}")
+async def hello_name(name: str):
+    message = f"Hello world! Hello {name}! Using Python {version}"
+    return {"message": message}
